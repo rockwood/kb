@@ -1,0 +1,77 @@
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+<style>
+    .td {
+        color: #000000;
+        font-size: 9pt;
+        font-family: 굴림체;
+    }
+</style>
+<table cellpadding='0' cellspacing='0' border='0' width='610'>
+    <tr valign='top'>
+        <td width='605'>
+            <table width='605' border='1' cellspacing='1' cellpadding='4'>
+                <tr>
+                    <td width='120' class='td' bgcolor='#C8DFF9'>Inquiry Period </td>
+                    <td width='174' class='td' colspan=8>2016.10.25 ~ 2016.12.25 </td>
+                </tr>
+                <tr>
+                    <td class='td' bgcolor='#C8DFF9'>Account Number</td>
+                    <td colspan=3 class='td'>000</td>
+                    <td width='120' class='td' bgcolor='#C8DFF9'>Balance</td>
+                    <td width='174' class='td' colspan='4'>500</td>
+                </tr>
+                <tr>
+                    <td class='td' bgcolor='#C8DFF9'>Available Balance</td>
+                    <td class='td' colspan='8'>500</td>
+                </tr>
+            </table>
+            <br>
+            <table width='605' border='1' cellspacing='1' cellpadding='4'>
+                <tr>
+                    <td class='td' align='center' bgcolor='#C8DFF9'>Transaction Date</td>
+                    <td class='td' align='center' bgcolor='#C8DFF9'>Transaction time</td>
+                    <td class='td' align='center' bgcolor='#C8DFF9'>Description</td>
+                    <td class='td' align='center' bgcolor='#C8DFF9'>Sender/ Receiver</td>
+                    <td class='td' align='center' bgcolor='#C8DFF9'>Memo</td>
+                    <td class='td' align='center' bgcolor='#C8DFF9'>Withdrawn Amount</td>
+                    <td class='td' align='center' bgcolor='#C8DFF9'>Deposited Amount</td>
+                    <td class='td' align='center' bgcolor='#C8DFF9'>Balance</td>
+                    <td class='td' align='center' bgcolor='#C8DFF9'>Type</td>
+                </tr>
+                <tr align='center'>
+                    <td class='td' align='center'>2016.12.25</td>
+                    <td class='td' align='center'>12:17:22</td>
+                    <td class='td' align='left'>&nbsp;Checkcard Withdraw</td>
+                    <td class='td' align='left'>&nbsp;레오니다스</td>
+                    <td class='td' align='left'>&nbsp;</td>
+                    <td class='td' align='right'>100</td>
+                    <td class='td' align='right'>0</td>
+                    <td class='td' align='right'>500</td>
+                    <td class='td' align='left'>&nbsp;　</td>
+                </tr>
+                <tr align='center'>
+                    <td class='td' align='center'>2016.12.25</td>
+                    <td class='td' align='center'>09:47:51</td>
+                    <td class='td' align='left'>&nbsp;Checkcard Withdraw</td>
+                    <td class='td' align='left'>&nbsp;티머니택시</td>
+                    <td class='td' align='left'>&nbsp;</td>
+                    <td class='td' align='right'>100</td>
+                    <td class='td' align='right'>0</td>
+                    <td class='td' align='right'>400</td>
+                    <td class='td' align='left'>&nbsp;　</td>
+                </tr>
+                <tr align='center'>
+                    <td class='td' align='center'>2016.12.24</td>
+                    <td class='td' align='center'>10:33:47</td>
+                    <td class='td' align='left'>&nbsp;Checkcard Withdraw</td>
+                    <td class='td' align='left'>&nbsp;헤이리103커피2호점</td>
+                    <td class='td' align='left'>&nbsp;</td>
+                    <td class='td' align='right'>0</td>
+                    <td class='td' align='right'>100</td>
+                    <td class='td' align='right'>500</td>
+                    <td class='td' align='left'>&nbsp;　</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>

@@ -1,18 +1,8 @@
 defmodule Kb do
-  @moduledoc """
-  Documentation for Kb.
-  """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Kb.hello
-      :world
-
-  """
-  def hello do
-    :world
+  def convert(path) do
+    path
+    |> Kb.Export.read!
+    |> Kb.Converter.run
+    |> Kb.Writer.write_csv
   end
 end
