@@ -1,6 +1,4 @@
 defmodule Kb.CLI do
-  alias Kb.{Importer}
-
   @moduledoc """
   usage: kb [options]
   """
@@ -25,7 +23,15 @@ defmodule Kb.CLI do
     System.halt(0)
   end
   def process({path}) do
-    Kb.convert(path)
+    case Kb.convert(path) do
+      {:ok, export} ->
+        IO.puts("Converted #{Enum.count(export.rows)} rows to: #{export.output_path}")
+        System.halt(0)
+      {:error, reason} ->
+        IO.puts("Error: #{reason}")
+        System.halt(-1)
+    end
+
   end
 
   defp handle_parse({[help: true], _, _}) do
