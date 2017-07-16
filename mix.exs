@@ -19,8 +19,8 @@ defmodule Kb.Mixfile do
 
   defp deps do
     [
-      {:floki, "~> 0.11.0"},
-      {:csv, "~> 1.4.2"},
+      {:floki, "~> 0.17"},
+      {:csv, "~> 2.0"},
     ]
   end
 
