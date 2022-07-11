@@ -1,6 +1,6 @@
 defmodule Kb.CLI do
   @moduledoc """
-  usage: kb [options]
+  usage: kb export_file.xls
   """
 
   @switches [help: :boolean]
@@ -26,7 +26,7 @@ defmodule Kb.CLI do
   def process({path}) do
     case Kb.convert(path) do
       {:ok, export} ->
-        IO.puts("Converted #{Enum.count(export.rows)} rows to: #{export.output_path}")
+        IO.puts("Converted #{length(export.rows) - 1} rows to: #{export.output_path}")
         System.halt(0)
 
       {:error, reason} ->
