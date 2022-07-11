@@ -19,27 +19,30 @@ defmodule Kb.CLI do
   end
 
   def process(:help) do
-    IO.puts @moduledoc
+    IO.puts(@moduledoc)
     System.halt(0)
   end
+
   def process({path}) do
     case Kb.convert(path) do
       {:ok, export} ->
         IO.puts("Converted #{Enum.count(export.rows)} rows to: #{export.output_path}")
         System.halt(0)
+
       {:error, reason} ->
         IO.puts("Error: #{reason}")
         System.halt(-1)
     end
-
   end
 
   defp handle_parse({[help: true], _, _}) do
     :help
   end
+
   defp handle_parse({_, [path], _}) do
     {path}
   end
+
   defp handle_parse(_) do
     :help
   end

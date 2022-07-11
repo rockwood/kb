@@ -7,8 +7,8 @@ defmodule Kb.Mixfile do
       version: "0.1.0",
       elixir: "~> 1.4-rc",
       escript: escript_config(),
-      build_embedded: Mix.env == :prod,
-      start_permanent: Mix.env == :prod,
+      build_embedded: Mix.env() == :prod,
+      start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
   end
@@ -20,7 +20,7 @@ defmodule Kb.Mixfile do
   defp deps do
     [
       {:floki, "~> 0.17"},
-      {:csv, "~> 2.0"},
+      {:csv, "~> 2.0"}
     ]
   end
 

@@ -50,28 +50,28 @@ defmodule Kb.ConverterTest do
 
   describe "run" do
     setup do
-      {:ok, export: %Kb.Export{body: @test_body} |> Kb.Converter.run}
+      {:ok, export: %Kb.Export{body: @test_body} |> Kb.Converter.run()}
     end
 
     test "parses the body", %{export: export} do
       assert export.rows == [
-        %{
-          "Category" => "",
-          "Date" => "24/12/2016",
-          "Inflow" => "0.00",
-          "Memo" => "",
-          "Outflow" => "10.20",
-          "Payee" => "레오니다스"
-        },
-        %{
-          "Category" => "",
-          "Date" => "25/12/2016",
-          "Inflow" => "10.50",
-          "Memo" => "",
-          "Outflow" => "0.00",
-          "Payee" => "레오니다스"
-        }
-      ]
+               %{
+                 "Category" => "",
+                 "Date" => "24/12/2016",
+                 "Inflow" => "0.00",
+                 "Memo" => "",
+                 "Outflow" => "10.20",
+                 "Payee" => "레오니다스"
+               },
+               %{
+                 "Category" => "",
+                 "Date" => "25/12/2016",
+                 "Inflow" => "10.50",
+                 "Memo" => "",
+                 "Outflow" => "0.00",
+                 "Payee" => "레오니다스"
+               }
+             ]
     end
   end
 end

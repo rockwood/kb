@@ -4,7 +4,7 @@ defmodule KbTest do
 
   setup do
     {:ok, export} = Kb.convert("test/fixtures/example.xls")
-    on_exit fn() -> File.rm!(export.output_path) end
+    on_exit(fn -> File.rm!(export.output_path) end)
     {:ok, export: export}
   end
 
