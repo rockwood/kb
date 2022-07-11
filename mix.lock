@@ -1,4 +1,7 @@
-%{"csv": {:hex, :csv, "2.0.0", "c66fea89ba7862b94901baf0871285e9b73cad89c5fdb57a6386d2adcf29593e", [:mix], [{:parallel_stream, "~> 1.0.4", [hex: :parallel_stream, repo: "hexpm", optional: false]}], "hexpm"},
-  "floki": {:hex, :floki, "0.17.2", "81b3a39d85f5cae39c8da16236ce152f7f8f50faf84b480ba53351d7e96ca6ca", [:mix], [{:mochiweb, "~> 2.15", [hex: :mochiweb, repo: "hexpm", optional: false]}], "hexpm"},
-  "mochiweb": {:hex, :mochiweb, "2.15.0", "e1daac474df07651e5d17cc1e642c4069c7850dc4508d3db7263a0651330aacc", [:rebar3], [], "hexpm"},
-  "parallel_stream": {:hex, :parallel_stream, "1.0.5", "4c78d3e675f9eff885cbe252c89a8fc1d2fb803c0d03a914281e587834e09431", [:mix], [], "hexpm"}}
+%{
+  "csv": {:hex, :csv, "2.4.1", "50e32749953b6bf9818dbfed81cf1190e38cdf24f95891303108087486c5925e", [:mix], [{:parallel_stream, "~> 1.0.4", [hex: :parallel_stream, repo: "hexpm", optional: false]}], "hexpm", "54508938ac67e27966b10ef49606e3ad5995d665d7fc2688efb3eab1307c9079"},
+  "floki": {:hex, :floki, "0.33.1", "f20f1eb471e726342b45ccb68edb9486729e7df94da403936ea94a794f072781", [:mix], [{:html_entities, "~> 0.5.0", [hex: :html_entities, repo: "hexpm", optional: false]}], "hexpm", "461035fd125f13fdf30f243c85a0b1e50afbec876cbf1ceefe6fddd2e6d712c6"},
+  "html_entities": {:hex, :html_entities, "0.5.2", "9e47e70598da7de2a9ff6af8758399251db6dbb7eebe2b013f2bbd2515895c3c", [:mix], [], "hexpm", "c53ba390403485615623b9531e97696f076ed415e8d8058b1dbaa28181f4fdcc"},
+  "mochiweb": {:hex, :mochiweb, "2.15.0", "e1daac474df07651e5d17cc1e642c4069c7850dc4508d3db7263a0651330aacc", [:rebar3], [], "hexpm", "b960d1cbcf40a30963eeee90ab7aeae074cbfa9a238561fb4434add1afc3075c"},
+  "parallel_stream": {:hex, :parallel_stream, "1.0.6", "b967be2b23f0f6787fab7ed681b4c45a215a81481fb62b01a5b750fa8f30f76c", [:mix], [], "hexpm", "639b2e8749e11b87b9eb42f2ad325d161c170b39b288ac8d04c4f31f8f0823eb"},
+}
