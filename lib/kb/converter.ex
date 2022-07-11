@@ -1,30 +1,37 @@
 defmodule Kb.Converter do
-  def run(export) do
-    rows =
-      export.body
+  @headers ["Date", "Payee", "Category", "Memo", "Outflow", "Inflow"]
+
+  def run(body) do
+    with {:ok, doc} <- Floki.parse_document(body) do
+      doc
       |> Floki.find("table table")
-      |> Enum.take(-1)
+      |> Enum.drop(1)
       |> Floki.find("tr")
-      |> extract_rows()
-
-    Map.put(export, :rows, rows)
+      |> Enum.drop(1)
+      |> extract_rows([@headers])
+    end
   end
 
-  defp extract_rows([_header_row | body_rows]) do
-    Enum.map(body_rows, &extract_row/1)
-  end
+  defp extract_rows([], results), do: {:ok, Enum.reverse(results)}
 
-  defp extract_row({"tr", _attrs, columns}) do
-    [date, _time, _desc, payee, memo, amount_withdrawn, amount_deposited, _balance, _type] = columns
+  defp extract_rows([head | tail], results) do
+    case head do
+      {"tr", _, [date, _time, _desc, payee, memo, outflow, inflow, _bal, _type]} ->
+        row =
+          [
+            date |> Floki.text() |> parse_date(),
+            payee |> Floki.text() |> parse_text(),
+            "",
+            memo |> Floki.text() |> parse_text(),
+            outflow |> Floki.text() |> parse_amount(),
+            inflow |> Floki.text() |> parse_amount()
+          ]
 
-    %{
-      "Date" => date |> Floki.text() |> parse_date(),
-      "Payee" => payee |> Floki.text() |> parse_text(),
-      "Category" => "",
-      "Memo" => memo |> Floki.text() |> parse_text(),
-      "Outflow" => amount_withdrawn |> Floki.text() |> parse_amount(),
-      "Inflow" => amount_deposited |> Floki.text() |> parse_amount()
-    }
+        extract_rows(tail, [row | results])
+
+      _ ->
+        {:error, "Invalid row (#{inspect(head)})"}
+    end
   end
 
   defp parse_date(string) do
